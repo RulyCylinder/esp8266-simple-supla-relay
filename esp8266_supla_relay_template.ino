@@ -1,13 +1,12 @@
 #include <SPI.h>
 #include <SuplaDevice.h>
-#define rel D1 //relay location on board
 #define STORAGE_OFFSET 100
 #include <supla/storage/eeprom.h>
 Supla::Eeprom eeprom(STORAGE_OFFSET);
 
 #include <supla/control/relay.h>
 
-auto r1 = new Supla::Control::Relay(D1, false);
+auto r1 = new Supla::Control::Relay(D1, false); // D1 is location of input of the relay
 
 
 // ESP32 based board:
